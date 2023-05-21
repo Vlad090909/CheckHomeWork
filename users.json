@@ -1,0 +1,14 @@
+{
+    "Андрей Python":
+    {
+        "timetable":
+        {
+            "6": "18:00",
+            "7": "19:00"
+        },
+        "homework": "",
+        "picture": "",
+        "type_mail": 1,
+        "mail": ""
+    }
+}
