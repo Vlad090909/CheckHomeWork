@@ -1,26 +1,24 @@
-#from PyQt5.QtCore import Q
-from PyQt5.QtWidgets import QWidget, QLabel, QListWidget, QTreeWidget, QHBoxLayout, QVBoxLayout, QGridLayout
-import json, hashlib
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QVBoxLayout, QTextEdit, QListWidget
 
-data = None
 
-def read():
-    global data
-    with open("users.json", "r+", encoding="utf-8") as file:
-        data = json.load(file)
-    print(data)
+app = QApplication([])
+main_win = QWidget()
+main_win.setWindowTitle('Программа контроля обучения учеников')
+main_win.resize(1280,720)
 
-def write():
-    global data
-    with open("users.json", "w+", encoding="utf-8") as file:
-        json.dump(data, file, sort_keys=True, indent=4, ensure_ascii=False)
-        print(hashlib.md5(data).hexdigest())
+lbl_schedule = QLabel("Расписание")
+lbl_schedule_today = QLabel("Расписание на сегодня")
+button = QPushButton('Изменить данные ученика')
+btn_add_student = QPushButton('Добавить ученика')
+btn_send_homework = QPushButton('Отправить')
+btn_change_schedule = QPushButton('Изменить расписание')
+text_homework= QTextEdit()
+text_homework.setPlaceholderText("Введите текст ДЗ")
+list_schedule = QListWidget()
+list_students = QListWidget()
+list_schedule_today = QListWidget()
 
-    print(data)
-
-read()
-data["Артемий"] = {"timetable": "",
-                   "homework": "",
-                   "picture": "",
-                   "mail": ""}
-write()
+# main_win.setLayout(v_line)
+main_win.show()
+app.exec_()

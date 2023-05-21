@@ -1,14 +1,18 @@
 {
-    "Андрей Python":
-    {
-        "timetable":
-        {
+    "Андрей Python": {
+        "homework": "",
+        "mail": "",
+        "picture": "",
+        "timetable": {
             "6": "18:00",
             "7": "19:00"
         },
+        "type_mail": 1
+    },
+    "Артемий": {
         "homework": "",
+        "mail": "",
         "picture": "",
-        "type_mail": 1,
-        "mail": ""
+        "timetable": ""
     }
 }
